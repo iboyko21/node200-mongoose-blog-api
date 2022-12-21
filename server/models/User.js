@@ -14,3 +14,5 @@ const UserSchema = new Schema({
         linkedIn: { type: String, required: false }
     }
 });
+
+module.exports = mongoose.model('User', UserSchema);
