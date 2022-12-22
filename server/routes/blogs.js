@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const User = require('../models/User');
+const Blog = require('../models/Blog');
+
 
 router.route("/")
     .get((req, res) => {
-        User
+        Blog
             .find()
             .then(users => {
                 res.status(200).json(users)
@@ -12,34 +13,44 @@ router.route("/")
             })
     })
     .post((req, res) => {
-        User    
+        Blog    
             .create(req.body)
             .then(users => {
                 res.status(200).json(users)
-                console.log(users)
             })
     })
 
 router.route("/:id")
     .get((req, res) => {
-        User
+        Blog
             .findById()
             .then(users => {
                 res.status(200).json(users);
-            });
+            })
     })
     .put((req, res) => {
-        User
+        Blog
             .findByIdAndUpdate()
             .then(users => {
                 res.status(200).json(users);
-            });
+            })
     })
     .delete((req, res) => {
-        User
+        Blog
             .findByIdAndRemove()
             .then(users => {
                 res.status(200).json(users)
+            })
+    });
+
+router.route("/featured")
+    .get((req, res) => {
+        Blog
+            .find()
+            // .where({ "featured": true })
+            .then(users => {
+                res.status(200).json(users);
+                console.log(users);
             })
     })
 
