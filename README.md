@@ -1,7 +1,5 @@
 # Mongoose Blog API
-### node200-mongoose-blog-api
-
-In this project, we're going to build a REST API for a blog website using Express and useMongoose to read/write Users and Blogs to a MongoDB database.
+Build a REST API for a blog website using Express and useMongoose to read/write Users and Blogs to a MongoDB database.
 
 ## High Level Steps
 - Initialize the Project
