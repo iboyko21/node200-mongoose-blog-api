@@ -18,7 +18,7 @@ router.route("/")
                 res.status(200).json(users)
                 console.log(users)
             })
-    })
+    });
 
 router.route("/:id")
     .get((req, res) => {
@@ -41,7 +41,7 @@ router.route("/:id")
             .then(users => {
                 res.status(200).json(users)
             })
-    })
+    });
 
 
 module.exports = router;
