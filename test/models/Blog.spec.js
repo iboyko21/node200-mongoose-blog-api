@@ -51,6 +51,5 @@ describe('Blog Model', () => {
 
                 done();
             })
-        // .catch(error => console.error(error));        
     });
 });
