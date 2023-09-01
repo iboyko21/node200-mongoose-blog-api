@@ -36,9 +36,7 @@ describe('Blog Model', () => {
             .save()
             .then(user => {
                 const b = new Blog(fakeBlogs[0]);
-
                 b.author = user._id;
-
                 return Promise.all([Promise.resolve(user), b.save()]);
             })
             .then(([user, blog]) => {
