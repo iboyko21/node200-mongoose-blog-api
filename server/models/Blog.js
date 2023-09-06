@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-// Creates a new Mongoose Schema
 const BlogSchema = new Schema({
     title: { type: String, required: true },
     article: { type: String, required: true },
