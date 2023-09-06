@@ -1,4 +1,3 @@
-// Imports mongoose and extracts Schema into it's own variable
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
